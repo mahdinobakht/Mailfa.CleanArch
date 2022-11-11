@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Mailfa.CleanArch.Core": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

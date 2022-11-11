@@ -1,0 +1,224 @@
+2022-11-10 22:58:14.833 +03:30 [INF] User profile is available. Using 'C:\Users\mehdi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-10 22:58:16.012 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-10 22:58:16.543 +03:30 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-11-10 22:58:16.593 +03:30 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-11-10 22:58:16.686 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-10 22:58:16.687 +03:30 [INF] Hosting environment: Development
+2022-11-10 22:58:16.687 +03:30 [INF] Content root path: D:\Web\mailfa\Mailfa.CleanArch\Mailfa.CleanArch.Web\
+2022-11-10 22:58:16.712 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2022-11-10 22:58:16.773 +03:30 [WRN] Failed to determine the https port for redirect.
+2022-11-10 22:58:16.841 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 404 - - 129.9312ms
+2022-11-10 22:58:48.121 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - -
+2022-11-10 22:58:48.496 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2022-11-10 22:58:48.502 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - - - 200 - text/html;charset=utf-8 382.5619ms
+2022-11-10 22:58:48.506 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 9.5559ms
+2022-11-10 22:58:48.534 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2022-11-10 22:58:48.619 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 84.9272ms
+2022-11-10 22:58:48.668 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - -
+2022-11-10 22:58:48.841 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 172.1470ms
+2022-11-10 23:09:51.559 +03:30 [INF] User profile is available. Using 'C:\Users\mehdi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-10 23:09:52.282 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-10 23:09:52.604 +03:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-11-10 23:09:52.645 +03:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-11-10 23:09:52.727 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-10 23:09:52.727 +03:30 [INF] Hosting environment: Development
+2022-11-10 23:09:52.727 +03:30 [INF] Content root path: D:\Web\mailfa\Mailfa.CleanArch\Mailfa.CleanArch.Web\
+2022-11-10 23:09:52.747 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2022-11-10 23:09:52.789 +03:30 [WRN] Failed to determine the https port for redirect.
+2022-11-10 23:09:52.841 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 404 - - 96.0321ms
+2022-11-10 23:10:04.835 +03:30 [INF] Request starting HTTP/1.1 POST http://localhost:57678/user/Signup application/json 125
+2022-11-10 23:10:04.840 +03:30 [INF] Executing endpoint 'Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web)'
+2022-11-10 23:10:04.863 +03:30 [INF] Route matched with {action = "Signup", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.VerifyVerificationCodeInput) on controller Mailfa.CleanArch.Controllers.UserController (Mailfa.CleanArch.Web).
+2022-11-10 23:10:05.096 +03:30 [INF] Executing action method Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web) - Validation state: "Valid"
+2022-11-10 23:10:05.163 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-10 23:10:05.599 +03:30 [INF] Executed DbCommand (50ms) [Parameters=[@__accountid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[accountid], [h].[Accountactive], [h].[Accountaddomain], [h].[Accountaddress], [h].[Accountadminlevel], [h].[Accountadusername], [h].[Accountblockendtime], [h].[Accountcountofmsg], [h].[Accountdisableimap], [h].[Accountdisablepop3], [h].[Accountdisablesmtp], [h].[Accountdomainid], [h].[Accountenablelimits], [h].[Accountenablesignature], [h].[Accountforwardaddress], [h].[Accountforwardenabled], [h].[Accountforwardkeeporiginal], [h].[Accountisad], [h].[Accountlastloginip], [h].[Accountlastlogontime], [h].[Accountlimittime], [h].[Accountmaxmsglimit], [h].[Accountmaxsize], [h].[Accountpassword], [h].[Accountpersonfirstname], [h].[Accountpersonlastname], [h].[Accountpwencryption], [h].[Accountsignaturehtml], [h].[Accountsignatureplaintext], [h].[Accountvacationexpiredate], [h].[Accountvacationexpires], [h].[Accountvacationmessage], [h].[Accountvacationmessageon], [h].[Accountvacationsubject]
+FROM [hm_accounts] AS [h]
+WHERE [h].[accountid] = @__accountid_0
+2022-11-10 23:10:05.673 +03:30 [ERR] An exception occurred while iterating over the results of a query for context type 'Mailfa.CleanArch.Infrastructure.Data.AppDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at lambda_method517(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at lambda_method517(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-11-10 23:10:05.793 +03:30 [INF] Executed action method Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 693.8123ms.
+2022-11-10 23:10:05.803 +03:30 [INF] Executing OkObjectResult, writing value of type 'Ardalis.Result.Result`1[[Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.GetVerificationCodeOutput, Mailfa.CleanArch.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-10 23:10:05.867 +03:30 [INF] Executed action Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web) in 998.0936ms
+2022-11-10 23:10:05.869 +03:30 [INF] Executed endpoint 'Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web)'
+2022-11-10 23:10:05.878 +03:30 [INF] Request finished HTTP/1.1 POST http://localhost:57678/user/Signup application/json 125 - 200 186 application/json;+charset=utf-8 1043.5120ms
+2022-11-10 23:10:17.657 +03:30 [INF] Request starting HTTP/1.1 POST http://localhost:57678/user/Signup application/json 125
+2022-11-10 23:10:17.659 +03:30 [INF] Executing endpoint 'Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web)'
+2022-11-10 23:10:17.659 +03:30 [INF] Route matched with {action = "Signup", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.VerifyVerificationCodeInput) on controller Mailfa.CleanArch.Controllers.UserController (Mailfa.CleanArch.Web).
+2022-11-10 23:10:17.674 +03:30 [INF] Executing action method Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web) - Validation state: "Valid"
+2022-11-10 23:10:17.712 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-10 23:10:17.720 +03:30 [INF] Executed DbCommand (2ms) [Parameters=[@__accountid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[accountid], [h].[Accountactive], [h].[Accountaddomain], [h].[Accountaddress], [h].[Accountadminlevel], [h].[Accountadusername], [h].[Accountblockendtime], [h].[Accountcountofmsg], [h].[Accountdisableimap], [h].[Accountdisablepop3], [h].[Accountdisablesmtp], [h].[Accountdomainid], [h].[Accountenablelimits], [h].[Accountenablesignature], [h].[Accountforwardaddress], [h].[Accountforwardenabled], [h].[Accountforwardkeeporiginal], [h].[Accountisad], [h].[Accountlastloginip], [h].[Accountlastlogontime], [h].[Accountlimittime], [h].[Accountmaxmsglimit], [h].[Accountmaxsize], [h].[Accountpassword], [h].[Accountpersonfirstname], [h].[Accountpersonlastname], [h].[Accountpwencryption], [h].[Accountsignaturehtml], [h].[Accountsignatureplaintext], [h].[Accountvacationexpiredate], [h].[Accountvacationexpires], [h].[Accountvacationmessage], [h].[Accountvacationmessageon], [h].[Accountvacationsubject]
+FROM [hm_accounts] AS [h]
+WHERE [h].[accountid] = @__accountid_0
+2022-11-10 23:10:17.721 +03:30 [ERR] An exception occurred while iterating over the results of a query for context type 'Mailfa.CleanArch.Infrastructure.Data.AppDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at lambda_method517(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at lambda_method517(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-11-10 23:10:43.194 +03:30 [INF] Executed action method Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 25494.8492ms.
+2022-11-10 23:10:43.209 +03:30 [INF] Executing OkObjectResult, writing value of type 'Ardalis.Result.Result`1[[Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.GetVerificationCodeOutput, Mailfa.CleanArch.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-10 23:10:43.223 +03:30 [INF] Executed action Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web) in 25563.6815ms
+2022-11-10 23:10:43.223 +03:30 [INF] Executed endpoint 'Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web)'
+2022-11-10 23:10:43.223 +03:30 [INF] Request finished HTTP/1.1 POST http://localhost:57678/user/Signup application/json 125 - 200 186 application/json;+charset=utf-8 25566.2633ms
+2022-11-10 23:10:45.090 +03:30 [INF] Request starting HTTP/1.1 POST http://localhost:57678/user/Signup application/json 125
+2022-11-10 23:10:45.090 +03:30 [INF] Executing endpoint 'Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web)'
+2022-11-10 23:10:45.090 +03:30 [INF] Route matched with {action = "Signup", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.VerifyVerificationCodeInput) on controller Mailfa.CleanArch.Controllers.UserController (Mailfa.CleanArch.Web).
+2022-11-10 23:10:45.102 +03:30 [INF] Executing action method Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web) - Validation state: "Valid"
+2022-11-10 23:10:45.108 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-10 23:10:45.111 +03:30 [INF] Executed DbCommand (2ms) [Parameters=[@__accountid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[accountid], [h].[Accountactive], [h].[Accountaddomain], [h].[Accountaddress], [h].[Accountadminlevel], [h].[Accountadusername], [h].[Accountblockendtime], [h].[Accountcountofmsg], [h].[Accountdisableimap], [h].[Accountdisablepop3], [h].[Accountdisablesmtp], [h].[Accountdomainid], [h].[Accountenablelimits], [h].[Accountenablesignature], [h].[Accountforwardaddress], [h].[Accountforwardenabled], [h].[Accountforwardkeeporiginal], [h].[Accountisad], [h].[Accountlastloginip], [h].[Accountlastlogontime], [h].[Accountlimittime], [h].[Accountmaxmsglimit], [h].[Accountmaxsize], [h].[Accountpassword], [h].[Accountpersonfirstname], [h].[Accountpersonlastname], [h].[Accountpwencryption], [h].[Accountsignaturehtml], [h].[Accountsignatureplaintext], [h].[Accountvacationexpiredate], [h].[Accountvacationexpires], [h].[Accountvacationmessage], [h].[Accountvacationmessageon], [h].[Accountvacationsubject]
+FROM [hm_accounts] AS [h]
+WHERE [h].[accountid] = @__accountid_0
+2022-11-10 23:10:45.120 +03:30 [ERR] An exception occurred while iterating over the results of a query for context type 'Mailfa.CleanArch.Infrastructure.Data.AppDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at lambda_method517(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at lambda_method517(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-11-10 23:10:51.325 +03:30 [INF] Executed action method Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6222.9748ms.
+2022-11-10 23:10:51.326 +03:30 [INF] Executing OkObjectResult, writing value of type 'Ardalis.Result.Result`1[[Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.GetVerificationCodeOutput, Mailfa.CleanArch.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-10 23:10:51.326 +03:30 [INF] Executed action Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web) in 6235.9711ms
+2022-11-10 23:10:51.326 +03:30 [INF] Executed endpoint 'Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web)'
+2022-11-10 23:10:51.327 +03:30 [INF] Request finished HTTP/1.1 POST http://localhost:57678/user/Signup application/json 125 - 200 186 application/json;+charset=utf-8 6236.8291ms
+2022-11-10 23:10:54.156 +03:30 [INF] Request starting HTTP/1.1 POST http://localhost:57678/user/Signup application/json 125
+2022-11-10 23:10:54.156 +03:30 [INF] Executing endpoint 'Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web)'
+2022-11-10 23:10:54.156 +03:30 [INF] Route matched with {action = "Signup", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.VerifyVerificationCodeInput) on controller Mailfa.CleanArch.Controllers.UserController (Mailfa.CleanArch.Web).
+2022-11-10 23:10:54.168 +03:30 [INF] Executing action method Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web) - Validation state: "Valid"
+2022-11-10 23:10:54.172 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-10 23:10:54.173 +03:30 [INF] Executed DbCommand (1ms) [Parameters=[@__accountid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[accountid], [h].[Accountactive], [h].[Accountaddomain], [h].[Accountaddress], [h].[Accountadminlevel], [h].[Accountadusername], [h].[Accountblockendtime], [h].[Accountcountofmsg], [h].[Accountdisableimap], [h].[Accountdisablepop3], [h].[Accountdisablesmtp], [h].[Accountdomainid], [h].[Accountenablelimits], [h].[Accountenablesignature], [h].[Accountforwardaddress], [h].[Accountforwardenabled], [h].[Accountforwardkeeporiginal], [h].[Accountisad], [h].[Accountlastloginip], [h].[Accountlastlogontime], [h].[Accountlimittime], [h].[Accountmaxmsglimit], [h].[Accountmaxsize], [h].[Accountpassword], [h].[Accountpersonfirstname], [h].[Accountpersonlastname], [h].[Accountpwencryption], [h].[Accountsignaturehtml], [h].[Accountsignatureplaintext], [h].[Accountvacationexpiredate], [h].[Accountvacationexpires], [h].[Accountvacationmessage], [h].[Accountvacationmessageon], [h].[Accountvacationsubject]
+FROM [hm_accounts] AS [h]
+WHERE [h].[accountid] = @__accountid_0
+2022-11-10 23:10:54.174 +03:30 [ERR] An exception occurred while iterating over the results of a query for context type 'Mailfa.CleanArch.Infrastructure.Data.AppDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at lambda_method517(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at lambda_method517(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-11-10 23:10:59.697 +03:30 [INF] Executed action method Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5529.3243ms.
+2022-11-10 23:10:59.698 +03:30 [INF] Executing OkObjectResult, writing value of type 'Ardalis.Result.Result`1[[Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.GetVerificationCodeOutput, Mailfa.CleanArch.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-10 23:10:59.700 +03:30 [INF] Executed action Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web) in 5544.157ms
+2022-11-10 23:10:59.700 +03:30 [INF] Executed endpoint 'Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web)'
+2022-11-10 23:10:59.701 +03:30 [INF] Request finished HTTP/1.1 POST http://localhost:57678/user/Signup application/json 125 - 200 186 application/json;+charset=utf-8 5545.3587ms
+2022-11-10 23:11:02.648 +03:30 [INF] Request starting HTTP/1.1 POST http://localhost:57678/user/Signup application/json 125
+2022-11-10 23:11:02.649 +03:30 [INF] Executing endpoint 'Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web)'
+2022-11-10 23:11:02.649 +03:30 [INF] Route matched with {action = "Signup", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.VerifyVerificationCodeInput) on controller Mailfa.CleanArch.Controllers.UserController (Mailfa.CleanArch.Web).
+2022-11-10 23:11:02.661 +03:30 [INF] Executing action method Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web) - Validation state: "Valid"
+2022-11-10 23:11:42.538 +03:30 [INF] User profile is available. Using 'C:\Users\mehdi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-10 23:11:43.365 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-10 23:11:43.677 +03:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-11-10 23:11:43.712 +03:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-11-10 23:11:43.787 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-10 23:11:43.787 +03:30 [INF] Hosting environment: Development
+2022-11-10 23:11:43.787 +03:30 [INF] Content root path: D:\Web\mailfa\Mailfa.CleanArch\Mailfa.CleanArch.Web\
+2022-11-10 23:11:43.811 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2022-11-10 23:11:43.811 +03:30 [INF] Request starting HTTP/1.1 POST http://localhost:57678/user/Signup application/json 125
+2022-11-10 23:11:43.848 +03:30 [WRN] Failed to determine the https port for redirect.
+2022-11-10 23:11:43.866 +03:30 [INF] Executing endpoint 'Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web)'
+2022-11-10 23:11:43.891 +03:30 [INF] Route matched with {action = "Signup", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.VerifyVerificationCodeInput) on controller Mailfa.CleanArch.Controllers.UserController (Mailfa.CleanArch.Web).
+2022-11-10 23:11:43.903 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 404 - - 93.5904ms
+2022-11-10 23:11:44.074 +03:30 [INF] Executing action method Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web) - Validation state: "Valid"
+2022-11-10 23:11:46.374 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-10 23:11:46.774 +03:30 [INF] Executed DbCommand (48ms) [Parameters=[@__domainId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Group_Id], [w].[Group_AdvertiseEnable], [w].[Group_Default], [w].[Group_Disk_Enable], [w].[Group_Disk_WebDiskSize], [w].[Group_DomainId], [w].[Group_Mail_AutoForwardEnable], [w].[Group_Mail_AutoReplyEnable], [w].[Group_Mail_DisableIMAP], [w].[Group_Mail_DisablePOP3], [w].[Group_Mail_DisableSMTP], [w].[Group_Mail_EnableLimits], [w].[Group_Mail_GroupSending], [w].[Group_Mail_MaxEmailPerDay], [w].[Group_Mail_MaxEmailPerHour], [w].[Group_Mail_MaxSize], [w].[Group_Mail_MaxSuspendPerEmail], [w].[Group_Mail_POP3AccountLimit], [w].[Group_Mail_ReceptionMaxLimit], [w].[Group_Membership_AdminApproval], [w].[Group_Membership_EmailApproval], [w].[Group_Membership_MobileApproval], [w].[Group_Membership_Price], [w].[Group_Membership_ValidateMonth], [w].[Group_Name], [w].[Group_SMS_EnglishPrice], [w].[Group_SMS_PersianPrice], [w].[Group_SMS_SignatureEnable], [w].[Group_Sms_Enable], [w].[Group_SpacialUser], [w].[Group_UpgradeEnable], [w].[Group_WapEnable]
+FROM [WebMail_Groups] AS [w]
+WHERE ([w].[Group_Default] = CAST(1 AS bit)) AND ([w].[Group_DomainId] = @__domainId_0)
+2022-11-10 23:11:50.380 +03:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (Size = 4000), @p8='?' (Size = 1) (DbType = Byte), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Int32), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [WebMail_Users] ([User_AccountID], [User_Address], [User_City], [User_CountryID], [User_ExpireDate], [User_Fax], [User_GroupID], [User_Mobile], [User_MobileConfirmed], [User_OptionalEmail], [User_PostalCode], [User_Province], [User_QuestionAnswer], [User_QuestionID], [User_RegisterDate], [User_SignupIP], [User_Telephone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+SELECT [User_Id]
+FROM [WebMail_Users]
+WHERE @@ROWCOUNT = 1 AND [User_Id] = scope_identity();
+2022-11-10 23:11:50.437 +03:30 [INF] Executed action method Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6359.4699ms.
+2022-11-10 23:11:50.445 +03:30 [INF] Executing OkObjectResult, writing value of type 'Ardalis.Result.Result`1[[Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.GetVerificationCodeOutput, Mailfa.CleanArch.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-10 23:11:50.494 +03:30 [INF] Executed action Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web) in 6600.1175ms
+2022-11-10 23:11:50.495 +03:30 [INF] Executed endpoint 'Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web)'
+2022-11-10 23:11:50.502 +03:30 [INF] Request finished HTTP/1.1 POST http://localhost:57678/user/Signup application/json 125 - 200 273 application/json;+charset=utf-8 6693.8743ms
+2022-11-10 23:12:04.885 +03:30 [INF] Request starting HTTP/1.1 POST http://localhost:57678/user/Signup application/json 125
+2022-11-10 23:12:04.886 +03:30 [INF] Executing endpoint 'Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web)'
+2022-11-10 23:12:04.887 +03:30 [INF] Route matched with {action = "Signup", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.VerifyVerificationCodeInput) on controller Mailfa.CleanArch.Controllers.UserController (Mailfa.CleanArch.Web).
+2022-11-10 23:12:04.898 +03:30 [INF] Executing action method Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web) - Validation state: "Valid"
+2022-11-10 23:12:13.687 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-10 23:12:13.701 +03:30 [INF] Executed DbCommand (3ms) [Parameters=[@__domainId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Group_Id], [w].[Group_AdvertiseEnable], [w].[Group_Default], [w].[Group_Disk_Enable], [w].[Group_Disk_WebDiskSize], [w].[Group_DomainId], [w].[Group_Mail_AutoForwardEnable], [w].[Group_Mail_AutoReplyEnable], [w].[Group_Mail_DisableIMAP], [w].[Group_Mail_DisablePOP3], [w].[Group_Mail_DisableSMTP], [w].[Group_Mail_EnableLimits], [w].[Group_Mail_GroupSending], [w].[Group_Mail_MaxEmailPerDay], [w].[Group_Mail_MaxEmailPerHour], [w].[Group_Mail_MaxSize], [w].[Group_Mail_MaxSuspendPerEmail], [w].[Group_Mail_POP3AccountLimit], [w].[Group_Mail_ReceptionMaxLimit], [w].[Group_Membership_AdminApproval], [w].[Group_Membership_EmailApproval], [w].[Group_Membership_MobileApproval], [w].[Group_Membership_Price], [w].[Group_Membership_ValidateMonth], [w].[Group_Name], [w].[Group_SMS_EnglishPrice], [w].[Group_SMS_PersianPrice], [w].[Group_SMS_SignatureEnable], [w].[Group_Sms_Enable], [w].[Group_SpacialUser], [w].[Group_UpgradeEnable], [w].[Group_WapEnable]
+FROM [WebMail_Groups] AS [w]
+WHERE ([w].[Group_Default] = CAST(1 AS bit)) AND ([w].[Group_DomainId] = @__domainId_0)
+2022-11-10 23:12:14.417 +03:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (Size = 4000), @p8='?' (Size = 1) (DbType = Byte), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Int32), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [WebMail_Users] ([User_AccountID], [User_Address], [User_City], [User_CountryID], [User_ExpireDate], [User_Fax], [User_GroupID], [User_Mobile], [User_MobileConfirmed], [User_OptionalEmail], [User_PostalCode], [User_Province], [User_QuestionAnswer], [User_QuestionID], [User_RegisterDate], [User_SignupIP], [User_Telephone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+SELECT [User_Id]
+FROM [WebMail_Users]
+WHERE @@ROWCOUNT = 1 AND [User_Id] = scope_identity();
+2022-11-10 23:12:14.427 +03:30 [INF] Executed action method Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9528.9694ms.
+2022-11-10 23:12:14.427 +03:30 [INF] Executing OkObjectResult, writing value of type 'Ardalis.Result.Result`1[[Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.GetVerificationCodeOutput, Mailfa.CleanArch.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-10 23:12:14.428 +03:30 [INF] Executed action Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web) in 9540.9106ms
+2022-11-10 23:12:14.428 +03:30 [INF] Executed endpoint 'Mailfa.CleanArch.Controllers.UserController.Signup (Mailfa.CleanArch.Web)'
+2022-11-10 23:12:14.428 +03:30 [INF] Request finished HTTP/1.1 POST http://localhost:57678/user/Signup application/json 125 - 200 273 application/json;+charset=utf-8 9543.6446ms
