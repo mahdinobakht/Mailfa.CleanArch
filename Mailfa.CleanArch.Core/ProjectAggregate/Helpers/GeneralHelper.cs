@@ -9,8 +9,8 @@ using System.Security.Cryptography;
 using System.Globalization;
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
-
-
+using System.ComponentModel.DataAnnotations;
+using Mailfa.CleanArch.Core.Properties;
 
 namespace Mailfa.CleanArch.Core.ProjectAggregate.Helpers
 {
@@ -49,9 +49,8 @@ namespace Mailfa.CleanArch.Core.ProjectAggregate.Helpers
 
             try
             {
-                var rm = new System.Resources.ResourceManager("Mailfa.CleanArch.Core.Resource",
-                    Assembly.GetExecutingAssembly());
-                result = rm.GetString(name, CultureInfo.CurrentCulture);
+                System.Resources.ResourceManager myResourceClass = new System.Resources.ResourceManager(typeof(Resources));
+                result = myResourceClass.GetString(name);
             }
             catch
             { }
@@ -70,5 +69,12 @@ namespace Mailfa.CleanArch.Core.ProjectAggregate.Helpers
             { }
             return result;
         }
+
+        public static bool IsValidEmailAddress(string email)
+        {
+            var attr = new EmailAddressAttribute();
+            return attr.IsValid(email);
+        }
+
     }
 }

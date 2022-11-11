@@ -12,17 +12,17 @@ namespace Mailfa.CleanArch.Controllers
 
     public class UserController : BaseApiController<UserController>
     {
-        private readonly IUserService _userService;
-        public UserController(IUserService userService)
+        private readonly IUserService userService;
+        public UserController(IUserService _userService)
         {
-            _userService = userService;
+            this.userService = _userService;
         }
 
         [HttpPost("GetVerificationCode")]
         [AllowAnonymous]
         public async Task<IActionResult> GetVerificationCode(string mobileNumber)
         {
-            var result = await _userService.GetVerificationCode(mobileNumber);
+            var result = await userService.GetVerificationCode(mobileNumber);
             return Ok(result);
         }
 
@@ -30,7 +30,7 @@ namespace Mailfa.CleanArch.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> VerifyVerificationCode(VerifyVerificationCodeInput request)
         {
-            var result = await _userService.VerifyVerificationCode(request);
+            var result = await userService.VerifyVerificationCode(request);
             return Ok(result);
         }
 
@@ -39,9 +39,20 @@ namespace Mailfa.CleanArch.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Signup(VerifyVerificationCodeInput request)
         {
-            var result = await _userService.Signup(request);
+            var result = await userService.Signup(request);
             return Ok(result);
         }
+
+        [HttpPost("ForgotPassword")]
+        [AllowAnonymous]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordInput request)
+        {
+            var result = await userService.ForgotPassword(request);
+            return Ok(result);
+        }
+
+
+        
 
 
     }

@@ -12,3 +12,15 @@ public class HmAccountsWithAccountIdSpec : Specification<hm_accounts>, ISingleRe
             .Where(p => p.accountid == accountid);
   }
 }
+
+
+public class HmAccountsWithAccountIdAndAddressSpec : Specification<hm_accounts>, ISingleResultSpecification
+{
+    public HmAccountsWithAccountIdAndAddressSpec(int accountDomainId, string emailAddress)
+    {
+        Query
+            .Where(p => p.Accountdomainid == accountDomainId && p.Accountaddress== emailAddress);
+    }
+}
+
+

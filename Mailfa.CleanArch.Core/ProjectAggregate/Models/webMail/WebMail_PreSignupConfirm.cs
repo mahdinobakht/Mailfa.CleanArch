@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mailfa.CleanArch.Core.ProjectAggregate.Models
+namespace Mailfa.CleanArch.Core.ProjectAggregate.Models.webMail
 {
     public class WebMail_PreSignupConfirm : EntityBase, IAggregateRoot
     {

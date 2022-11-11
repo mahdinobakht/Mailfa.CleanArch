@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Mailfa.CleanArch.Core.ProjectAggregate.hMail
 {
-    public class HmImapfolders : EntityBase, IAggregateRoot
+    public class hm_imapfolders : EntityBase, IAggregateRoot
     {
         public int Folderid { get; set; }
         public int Folderaccountid { get; set; }
         public int Folderparentid { get; set; }
-        public string Foldername { get; set; }
+        public string? Foldername { get; set; }
         public byte Folderissubscribed { get; set; }
         public DateTime Foldercreationtime { get; set; }
         public long Foldercurrentuid { get; set; }

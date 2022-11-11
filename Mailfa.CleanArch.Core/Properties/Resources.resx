@@ -117,8 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AccountIsDisabled" xml:space="preserve">
+    <value>حساب کاربری شما غیرفعال شده است</value>
+  </data>
+  <data name="DomainIsNotRelatedSystem" xml:space="preserve">
+    <value>دامنه {0} مربوط به به این سامانه نمی باشد</value>
+  </data>
   <data name="EmailIsEmpty" xml:space="preserve">
     <value>آدرس ایمیل وارد نشده است</value>
+  </data>
+  <data name="EmailNotExist" xml:space="preserve">
+    <value>آدرس ایمیل وارد شده در سیستم ثبت نشده است</value>
   </data>
   <data name="InvalidCaptch" xml:space="preserve">
     <value>کد کپچا نامعتبر است</value>
@@ -128,5 +137,8 @@
   </data>
   <data name="MaxRequestCountPassed" xml:space="preserve">
     <value>ارسال درخواست بیش از حد مجاز</value>
+  </data>
+  <data name="NotRecoveryMethodsExist" xml:space="preserve">
+    <value>هیچ یک از روش های بازیابی ایمیل براش شما فعال نیست</value>
   </data>
 </root>

@@ -9,5 +9,7 @@ namespace Mailfa.CleanArch.Core.ProjectAggregate.ViewModel
     public class GetVerificationCodeOutput
     {
         public string Token { get; set; }
+
+
     }
 }

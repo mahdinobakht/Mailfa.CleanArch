@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mailfa.CleanArch.Core.ProjectAggregate.Models
+namespace Mailfa.CleanArch.Core.ProjectAggregate.Models.webMail
 {
     public class WebMail_CheckRequest : EntityBase, IAggregateRoot
     {
 
         public int CR_ID { get; set; }
-        public int CR_Type { get; set; }
+        public byte CR_Type { get; set; }
         public string CR_IP { get; set; }
         public DateTime CR_ExpireDate { get; set; }
         public int CR_Count { get; set; }

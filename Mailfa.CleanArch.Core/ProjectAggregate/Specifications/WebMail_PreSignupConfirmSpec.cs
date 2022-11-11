@@ -1,5 +1,5 @@
 ﻿using Ardalis.Specification;
-using Mailfa.CleanArch.Core.ProjectAggregate.Models;
+using Mailfa.CleanArch.Core.ProjectAggregate.Models.webMail;
 
 namespace Mailfa.CleanArch.Core.ProjectAggregate.Specifications;
 

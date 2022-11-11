@@ -5,11 +5,13 @@ using Mailfa.CleanArch.Core.Interfaces;
 using Mailfa.CleanArch.Core.ProjectAggregate;
 using Mailfa.CleanArch.Core.ProjectAggregate.Helpers;
 using Mailfa.CleanArch.Core.ProjectAggregate.hMail;
-using Mailfa.CleanArch.Core.ProjectAggregate.Models;
+using Mailfa.CleanArch.Core.ProjectAggregate.Models.webMail;
 using Mailfa.CleanArch.Core.ProjectAggregate.Specifications;
 using Mailfa.CleanArch.Core.ProjectAggregate.ViewModel;
 using Mailfa.CleanArch.SharedKernel.Interfaces;
+using MediatR;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,25 +20,30 @@ using System.Runtime.CompilerServices;
 using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+using static Mailfa.CleanArch.Core.ProjectAggregate.Enums;
 
 namespace Mailfa.CleanArch.Core.Services
 {
     class UserService : IUserService
     {
-        private readonly IRepository<WebMail_Users> _userRepository;
-        private readonly IRepository<WebMail_PreSignupConfirm> _preSignupConfirmRepository;
-        private readonly IRepository<WebMail_Groups> _groupRepository;
-        private readonly IRepository<hm_accounts> _hmAccountsRepositroy;
-        private readonly IHmAccountsService _hAccountsService;
+        private readonly IRepository<WebMail_Users> userRepository;
+        private readonly IRepository<WebMail_PreSignupConfirm> preSignupConfirmRepository;
+        private readonly IRepository<WebMail_Groups> groupRepository;
+        private readonly IRepository<WebMail_CheckRequest> checkRequestRepository;
+        private readonly IRepository<hm_accounts> hmAccountsRepositroy;
+        private readonly IHmAccountsService hmAccountsService;
 
-        public UserService(IRepository<WebMail_Users> userRepository, IRepository<WebMail_PreSignupConfirm> preSignupConfirmRepository,
-            IRepository<WebMail_Groups> groupRepository, IHmAccountsService hAccountsService, IRepository<hm_accounts> hmAccountsRepositroy)
+        public UserService(IRepository<WebMail_Users> _userRepository, IRepository<WebMail_PreSignupConfirm> _preSignupConfirmRepository,
+            IRepository<WebMail_Groups> _groupRepository, IHmAccountsService _hmAccountsService, IRepository<hm_accounts> _hmAccountsRepositroy,
+             IRepository<WebMail_CheckRequest> _checkRequestRepository)
         {
-            _userRepository = userRepository;
-            _preSignupConfirmRepository = preSignupConfirmRepository;
-            _groupRepository = groupRepository;
-            _hAccountsService = hAccountsService;
-            _hmAccountsRepositroy = hmAccountsRepositroy;
+            userRepository = _userRepository;
+            preSignupConfirmRepository = _preSignupConfirmRepository;
+            groupRepository = _groupRepository;
+            checkRequestRepository = _checkRequestRepository;
+            hmAccountsService = _hmAccountsService;
+            hmAccountsRepositroy = _hmAccountsRepositroy;
 
         }
 
@@ -45,7 +52,7 @@ namespace Mailfa.CleanArch.Core.Services
             var result = false;
 
             var pscSpec = new PreSignupConfirmWithItemsSpec(mobileNumber);
-            var pscData = await _preSignupConfirmRepository.FirstOrDefaultAsync(pscSpec);
+            var pscData = await preSignupConfirmRepository.FirstOrDefaultAsync(pscSpec);
 
             Random rnd = new Random();
             var code = rnd.Next(1000, 9999);
@@ -62,14 +69,14 @@ namespace Mailfa.CleanArch.Core.Services
                         pscData.PSC_Code = VerificationCode;
                         pscData.PSC_TryCount++;
                         pscData.PSC_Token = token;
-                        await _preSignupConfirmRepository.UpdateAsync(pscData);
+                        await preSignupConfirmRepository.UpdateAsync(pscData);
                         return Result.Success(true, VerificationCode);
                     }
                 }
             }
             else //insert SignupConfirm 
             {
-                var insData = await _preSignupConfirmRepository.AddAsync(new WebMail_PreSignupConfirm
+                var insData = await preSignupConfirmRepository.AddAsync(new WebMail_PreSignupConfirm
                 {
                     PSC_Mobile = mobileNumber,
                     PSC_TryCount = 1,
@@ -102,7 +109,7 @@ namespace Mailfa.CleanArch.Core.Services
                     return Result<GetVerificationCodeOutput>.Error(GeneralHelper.GetResourcesValue("InvalidMobileNumber"));
 
                 var userSpec = new UserByMobileWithItemsSpec(mobileNumber);
-                var userData = await _userRepository.FirstOrDefaultAsync(userSpec);
+                var userData = await userRepository.FirstOrDefaultAsync(userSpec);
                 if (userData != null)
                 {
                     return Result<GetVerificationCodeOutput>.Error(GeneralHelper.GetResourcesValue("UserExist"));
@@ -137,7 +144,7 @@ namespace Mailfa.CleanArch.Core.Services
             try
             {
                 var pscSpec = new PreSignupConfirmWithItemsSpec(request.MobileNumber);
-                var pscData = await _preSignupConfirmRepository.FirstOrDefaultAsync(pscSpec);
+                var pscData = await preSignupConfirmRepository.FirstOrDefaultAsync(pscSpec);
 
                 if (pscData != null)
                 {
@@ -161,22 +168,22 @@ namespace Mailfa.CleanArch.Core.Services
             var result = new GetVerificationCodeOutput();
             try
             {
-                // ایجاد اکانت
-                var domainId = _hAccountsService.GetDomainId();
+                // Create Account
+                var domainId = hmAccountsService.GetDomainId();
 
                 //var groupSpec = new GenericSpecification<WebMail_Groups>(x => x.Group_Default == true && x.Group_DomainId == domainId) as ISpecification<WebMail_Groups>;
                 //var group = WebMailGroups.Where(x => x.GroupDefault == true && x.GroupDomainId == domainId).FirstOrDefault();
 
                 var groupSpec = new GroupByDefaultAndDomainIdSpec(domainId);
-                var groupData = await _groupRepository.FirstOrDefaultAsync(groupSpec);
+                var groupData = await groupRepository.FirstOrDefaultAsync(groupSpec);
                 if (groupData != null)
                 {
-                    var account = _hAccountsService.createNewAccount(request.MobileNumber, "", "", "1qaz!QAZ", groupData.Group_Id);
+                    var account = await hmAccountsService.CreateNewAccount(request.MobileNumber, "", "", "1qaz!QAZ", groupData.Group_Id);
                     if (account != null)
                     {
-                        await _userRepository.AddAsync(new WebMail_Users
+                        await userRepository.AddAsync(new WebMail_Users
                         {
-                            User_AccountID = account.Id,
+                            User_AccountID = account.ID,
                             User_Mobile = request.MobileNumber,
                             User_SignupIP = GeneralHelper.GetLocalIPAddress(),
                             User_RegisterDate = DateTime.Now
@@ -195,31 +202,133 @@ namespace Mailfa.CleanArch.Core.Services
         }
 
 
-        public async Task<Result<GetVerificationCodeOutput>> ForgotPassword(ForgotPasswordInput request)
+        public async Task<Result<ForgotPasswordOutput>> ForgotPassword(ForgotPasswordInput request)
         {
-            var result = new GetVerificationCodeOutput();
+            var result = new ForgotPasswordOutput();
             try
             {
-                var groupSpec = new GenericSpecification<WebMail_Groups>(x => x.Group_Default == true && x.Group_DomainId == domainId) as ISpecification<WebMail_Groups>;
+                var clientIp = GeneralHelper.GetLocalIPAddress();
+                if (string.IsNullOrEmpty(request.Email))
+                    return Result<ForgotPasswordOutput>.Error(GeneralHelper.GetResourcesValue("EmailIsEmpty"));
 
-                //if (string.IsNullOrEmpty(request.Email))
-                //    return Result<GetVerificationCodeOutput>.Error(GeneralHelper.GetResourcesValue("EmailIsEmpty") );  
-                //else if (!Common.Security.canSendRequest(ip, 13, Enums.RequestTypes.ForgetPassword, 3, out int requestCount))
-                //    return Result<GetVerificationCodeOutput>.Error(GeneralHelper.GetResourcesValue("MaxRequestCountPassed"));
-                //else if (string.IsNullOrEmpty(request.Captcha) || !Common.Security.verifyCaptcha(captcha))
-                //    return Result<GetVerificationCodeOutput>.Error(GeneralHelper.GetResourcesValue("InvalidCaptch"));
-                //else
-                //{
+                var checkRequestSpec = new CheckRequestByIpAndTypeSpec(clientIp, (int)RequestTypes.ForgetPassword);
+                var checkRequesData = await checkRequestRepository.FirstOrDefaultAsync(checkRequestSpec);
 
-                //}
-                return result;
+                if (checkRequesData == null)// First Time Request
+                {
+                    await checkRequestRepository.AddAsync(new WebMail_CheckRequest
+                    {
+                        CR_Count = 1,
+                        CR_ExpireDate = DateTime.Now.AddHours(2),
+                        CR_IP = clientIp,
+                        CR_Type = (int)RequestTypes.ForgetPassword
+                    });
+
+                    return await GetForgotPasswordRecoveryMethod(request);
+                }
+                else
+                {
+                    if (checkRequesData.CR_ExpireDate <= DateTime.Now) // 2 Hour Left For Last Request
+                    {
+                        checkRequesData.CR_Count = 1;
+                        checkRequesData.CR_ExpireDate = DateTime.Now.AddHours(2);
+                        await checkRequestRepository.UpdateAsync(checkRequesData);
+                    }
+
+                    var maxForgotPasswordCount = Convert.ToInt32(GeneralHelper.GetConfigurationKey("MaxForgotPasswordCount"));
+                    if (checkRequesData.CR_Count >= maxForgotPasswordCount)
+                        return Result<ForgotPasswordOutput>.Error(GeneralHelper.GetResourcesValue("MaxRequestCountPassed"));
+                    else//   Request Again
+                    {
+                        checkRequesData.CR_Count++;
+                        await checkRequestRepository.UpdateAsync(checkRequesData);
+
+                        return await GetForgotPasswordRecoveryMethod(request);
+                    }
+                }
             }
             catch (Exception ex)
             {
-                return Result<GetVerificationCodeOutput>.Error(ex.Message);
+                return Result<ForgotPasswordOutput>.Error(ex.Message);
             }
+        }
+
+        private async Task<Result<ForgotPasswordOutput>> GetForgotPasswordRecoveryMethod(ForgotPasswordInput request)
+        {
+            var result = new ForgotPasswordOutput();
+
+            if (!request.Email.Contains("@"))
+                request.Email = request.Email + "@" + GeneralHelper.GetConfigurationKey("DefaultDomainName");
+
+            var domainId = hmAccountsService.GetDomainId();
+            var hmAccountsSpec = new HmAccountsWithAccountIdAndAddressSpec(domainId, request.Email);
+            var hmAccountsData = await hmAccountsRepositroy.FirstOrDefaultAsync(hmAccountsSpec);
 
 
+            //  Get Recovery Metohd
+            if (hmAccountsData != null && hmAccountsData.Accountactive == 1)
+            {
+                List<string> types = new List<string>();
+
+                var userSpec = new UserByAccountIdSpec(hmAccountsData.accountid);
+                var userData = await userRepository.FirstOrDefaultAsync(userSpec);
+
+                if (userData != null)
+                {
+                    if (userData.User_Mobile != null) //  Mobile Exists
+                    {
+                        if (userData.User_Mobile.Length == 10 && userData.User_Mobile.StartsWith("9") || userData.User_Mobile.Length == 11 && userData.User_Mobile.StartsWith("09"))
+                            types.Add("mobile");
+                    }
+                    if (userData.User_OptionalEmail != null) //  Recovery Email Exists
+                    {
+                        if (!string.IsNullOrEmpty(userData.User_OptionalEmail) && userData.User_OptionalEmail.Contains("@"))
+                            types.Add("email");
+                    }
+                    if (userData.User_QuestionID != null) //  Security Question Exists
+                    {
+                        if (!string.IsNullOrEmpty(userData.User_QuestionAnswer) && userData.User_QuestionAnswer.Length >= 3)
+                            types.Add("question");
+                    }
+                }
+
+                if (types.Count > 0)
+                {
+                    result.RecoveryMethodList = types.ToList();
+                    return Result<ForgotPasswordOutput>.Success(value: result);
+                }
+                else
+                    return Result<ForgotPasswordOutput>.Error(GeneralHelper.GetResourcesValue("NotRecoveryMethodsExist"));
+            }
+            else
+            {
+                if (hmAccountsData != null && hmAccountsData.Accountactive == 0)
+                {
+                    var xpo = GeneralHelper.GetResourcesValue("AccountIsDisabled");
+                    return Result<ForgotPasswordOutput>.Error(GeneralHelper.GetResourcesValue("AccountIsDisabled"));
+                }
+                else
+                {
+                    var domainName = "";
+                    if (!GeneralHelper.IsValidEmailAddress(request.Email))
+                        return Result<ForgotPasswordOutput>.Error(GeneralHelper.GetResourcesValue("EmailNotExist"));
+                    else
+                    {
+                        domainName = request.Email.Substring(request.Email.IndexOf("@") + 1);
+                        try
+                        {
+                            if (hmAccountsService.GetDomainData(domainName) == null)
+                                return Result<ForgotPasswordOutput>.Error(String.Format(GeneralHelper.GetResourcesValue("DomainIsNotRelatedSystem"), domainName));
+                            else
+                                return Result<ForgotPasswordOutput>.Error(GeneralHelper.GetResourcesValue("EmailNotExist"));
+                        }
+                        catch
+                        {
+                            return Result<ForgotPasswordOutput>.Error(String.Format(GeneralHelper.GetResourcesValue("DomainIsNotRelatedSystem"), domainName));
+                        }
+                    }
+                }
+            }
         }
 
 

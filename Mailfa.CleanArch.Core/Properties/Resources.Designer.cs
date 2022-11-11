@@ -61,11 +61,38 @@ namespace Mailfa.CleanArch.Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to حساب کاربری شما غیرفعال شده است.
+        /// </summary>
+        internal static string AccountIsDisabled {
+            get {
+                return ResourceManager.GetString("AccountIsDisabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to دامنه {0} مربوط به به این سامانه نمی باشد.
+        /// </summary>
+        internal static string DomainIsNotRelatedSystem {
+            get {
+                return ResourceManager.GetString("DomainIsNotRelatedSystem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to آدرس ایمیل وارد نشده است.
         /// </summary>
         internal static string EmailIsEmpty {
             get {
                 return ResourceManager.GetString("EmailIsEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to آدرس ایمیل وارد شده در سیستم ثبت نشده است.
+        /// </summary>
+        internal static string EmailNotExist {
+            get {
+                return ResourceManager.GetString("EmailNotExist", resourceCulture);
             }
         }
         
@@ -93,6 +120,15 @@ namespace Mailfa.CleanArch.Core.Properties {
         internal static string MaxRequestCountPassed {
             get {
                 return ResourceManager.GetString("MaxRequestCountPassed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to هیچ یک از روش های بازیابی ایمیل براش شما فعال نیست.
+        /// </summary>
+        internal static string NotRecoveryMethodsExist {
+            get {
+                return ResourceManager.GetString("NotRecoveryMethodsExist", resourceCulture);
             }
         }
     }

@@ -15,10 +15,10 @@ namespace Mailfa.CleanArch.Core.Services
     class HmAccountsService : IHmAccountsService
     {
         private readonly IRepository<hm_accounts> _hmAccountsRepositroy;
-        private readonly IRepository<HmImapfolders> _hmImapfoldersRepository;
+        private readonly IRepository<hm_imapfolders> _hmImapfoldersRepository;
 
      
-        public HmAccountsService(IRepository<hm_accounts> hmAccountsRepositroy, IRepository<HmImapfolders> hmImapfoldersRepository)
+        public HmAccountsService(IRepository<hm_accounts> hmAccountsRepositroy, IRepository<hm_imapfolders> hmImapfoldersRepository)
         {
             _hmAccountsRepositroy = hmAccountsRepositroy;
             _hmImapfoldersRepository = hmImapfoldersRepository;
@@ -26,7 +26,7 @@ namespace Mailfa.CleanArch.Core.Services
 
         public static hMailServer.Application _application = null;
         // ایجاد اتصال به سرور پیش فرض به استفاده از تنظیمات سیستم
-        private hMailServer.Application currentServer
+        public hMailServer.Application currentServer
         {
             get
             {
@@ -48,19 +48,25 @@ namespace Mailfa.CleanArch.Core.Services
             return currentServer.Domains.ItemByName[GeneralHelper.GetConfigurationKey("DefaultDomainName")].ID;
         }
 
-        private string getFullEmail(string username)
+        public hMailServer.Domain GetDomainData(string domainName)
+        {
+            return currentServer.Domains.ItemByName[domainName];
+        }
+
+
+        private string GetFullEmail(string username)
         {
             if (username.Contains("@"))
                 return username;
             return username + "@" + GeneralHelper.GetConfigurationKey("DefaultDomainName");
         }
 
-        static List<HmImapfolders> GetFolders()
+        static List<hm_imapfolders> GetFolders()
         {
-            return new List<HmImapfolders> { new HmImapfolders { Foldername = "Sent Items", Folderissubscribed = 1 }, new HmImapfolders { Foldername = "Drafts", Folderissubscribed = 1 }, new HmImapfolders { Foldername = "Deleted Items", Folderissubscribed = 0 }, new HmImapfolders { Foldername = "Junk E-mail", Folderissubscribed = 1 } };
+            return new List<hm_imapfolders> { new hm_imapfolders { Foldername = "Sent Items", Folderissubscribed = 1 }, new hm_imapfolders { Foldername = "Drafts", Folderissubscribed = 1 }, new hm_imapfolders { Foldername = "Deleted Items", Folderissubscribed = 0 }, new hm_imapfolders { Foldername = "Junk E-mail", Folderissubscribed = 1 } };
         }
 
-        public async Task<hMailServer.Account> createNewAccount(string username, string firstname, string lastname, string password, int groupId)
+        public async Task<hMailServer.Account> CreateNewAccount(string username, string firstname, string lastname, string password, int groupId)
         {
             //var serverType = Type.GetTypeFromProgID("hMailServer.Application", GeneralHelper.GetConfigurationKey("Server_IP"));
             //hMailServer.Application _happlication = (hMailServer.Application)Activator.CreateInstance(serverType);
@@ -72,7 +78,7 @@ namespace Mailfa.CleanArch.Core.Services
             account.PersonFirstName = firstname;
             account.PersonLastName = lastname;
             account.Password = password;
-            account.Address = getFullEmail(username);
+            account.Address = GetFullEmail(username);
             account.Active = false;
             account.AdminLevel = hMailServer.eAdminLevel.hAdminLevelNormal;
 
@@ -82,7 +88,6 @@ namespace Mailfa.CleanArch.Core.Services
             var hmAccountSpec = new HmAccountsWithAccountIdSpec(account.ID);
             var accountData = await _hmAccountsRepositroy.FirstOrDefaultAsync(hmAccountSpec);
 
-            var xpo = 1;
             accountData.Accountdomainid = GetDomainId();
             await _hmAccountsRepositroy.UpdateAsync(accountData);
             _hmAccountsRepositroy.SaveChangesAsync();

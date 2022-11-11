@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Mailfa.CleanArch.Core.ProjectAggregate.ViewModel
 {
-    public class ForgotPasswordInput
+    public class ForgotPasswordOutput
     {
-        public string Email { get; set; }
+        public List<string>? RecoveryMethodList { get; set; }
+
+
     }
 }

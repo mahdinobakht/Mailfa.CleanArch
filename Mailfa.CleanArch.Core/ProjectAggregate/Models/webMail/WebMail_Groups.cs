@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mailfa.CleanArch.Core.ProjectAggregate.Models
+namespace Mailfa.CleanArch.Core.ProjectAggregate.Models.webMail
 {
-    public partial class WebMail_Groups :EntityBase, IAggregateRoot
+    public partial class WebMail_Groups : EntityBase, IAggregateRoot
     {
         public int Group_Id { get; set; }
         public int? Group_DomainId { get; set; }
@@ -45,6 +45,6 @@ namespace Mailfa.CleanArch.Core.ProjectAggregate.Models
         public short? Group_Membership_ValidateMonth { get; set; }
         public bool? Group_SpacialUser { get; set; }
 
-       // public virtual HmDomains Group_Domain { get; set; }
+        // public virtual HmDomains Group_Domain { get; set; }
     }
 }
