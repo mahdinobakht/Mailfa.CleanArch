@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using Mailfa.CleanArch.Core.ProjectAggregate.hMail;
+using Mailfa.CleanArch.Core.ProjectAggregate.Models.drive;
 using Mailfa.CleanArch.Core.ProjectAggregate.Models.webMail;
 using Mailfa.CleanArch.SharedKernel;
 using Mailfa.CleanArch.SharedKernel.Interfaces;
@@ -33,6 +34,7 @@ public class AppDbContext : DbContext
 
 
     //--- Drive
+    public DbSet<DriveFolder> DriveFolder => Set<DriveFolder>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -66,6 +68,8 @@ public class AppDbContext : DbContext
         #endregion
 
         #region <Drive>
+        var driveFolder = modelBuilder.Entity<DriveFolder>();
+        driveFolder.HasKey(x => x.DFL_ID);
         #endregion
 
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

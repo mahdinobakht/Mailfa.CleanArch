@@ -16,5 +16,9 @@ public class DefaultCoreModule : Module
         .As<IHmAccountsService>().InstancePerLifetimeScope();
 
 
+        builder.RegisterType<DriveService>()
+     .As<IDriveService>().InstancePerLifetimeScope();
+
+
     }
 }

@@ -1,0 +1,382 @@
+2022-11-12 21:54:06.592 +03:30 [INF] User profile is available. Using 'C:\Users\mehdi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-12 21:54:08.152 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-12 21:54:09.144 +03:30 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-11-12 21:54:09.236 +03:30 [INF] Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-11-12 21:54:09.389 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-12 21:54:09.389 +03:30 [INF] Hosting environment: Development
+2022-11-12 21:54:09.389 +03:30 [INF] Content root path: D:\Web\mailfa\Mailfa.CleanArch\Mailfa.CleanArch.Web\
+2022-11-12 21:54:09.435 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - -
+2022-11-12 21:54:09.435 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2022-11-12 21:54:09.522 +03:30 [WRN] Failed to determine the https port for redirect.
+2022-11-12 21:54:09.625 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 404 - - 196.3059ms
+2022-11-12 21:54:09.903 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - - - 200 - text/html;charset=utf-8 475.2843ms
+2022-11-12 21:54:09.958 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2022-11-12 21:54:09.967 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2022-11-12 21:54:09.968 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 9.7125ms
+2022-11-12 21:54:10.027 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 59.5841ms
+2022-11-12 21:54:10.137 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - -
+2022-11-12 21:54:10.317 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 180.1593ms
+2022-11-12 21:54:13.360 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - -
+2022-11-12 21:54:13.378 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - - - 200 - text/html;charset=utf-8 17.9450ms
+2022-11-12 21:54:13.389 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2022-11-12 21:54:13.392 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 2.7363ms
+2022-11-12 21:54:13.432 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2022-11-12 21:54:13.459 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 26.9812ms
+2022-11-12 21:54:13.532 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - -
+2022-11-12 21:54:13.534 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 2.1160ms
+2022-11-12 23:16:46.377 +03:30 [INF] User profile is available. Using 'C:\Users\mehdi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-12 23:16:48.002 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-12 23:16:48.964 +03:30 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-11-12 23:16:49.038 +03:30 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-11-12 23:16:49.162 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-12 23:16:49.163 +03:30 [INF] Hosting environment: Development
+2022-11-12 23:16:49.163 +03:30 [INF] Content root path: D:\Web\mailfa\Mailfa.CleanArch\Mailfa.CleanArch.Web\
+2022-11-12 23:16:49.198 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2022-11-12 23:16:49.282 +03:30 [WRN] Failed to determine the https port for redirect.
+2022-11-12 23:16:49.365 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 404 - - 170.8319ms
+2022-11-12 23:17:30.428 +03:30 [INF] Request starting HTTP/1.1 POST http://localhost:57678/v1/drive/GetFolders application/json 27
+2022-11-12 23:17:30.438 +03:30 [INF] Request finished HTTP/1.1 POST http://localhost:57678/v1/drive/GetFolders application/json 27 - 404 - - 9.3535ms
+2022-11-12 23:17:42.925 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - -
+2022-11-12 23:17:43.206 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - - - 200 - text/html;charset=utf-8 281.6067ms
+2022-11-12 23:17:43.206 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2022-11-12 23:17:43.214 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 7.2139ms
+2022-11-12 23:17:43.279 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2022-11-12 23:17:43.332 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 53.4698ms
+2022-11-12 23:17:43.434 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - -
+2022-11-12 23:17:43.635 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 201.1892ms
+2022-11-12 23:17:56.364 +03:30 [INF] User profile is available. Using 'C:\Users\mehdi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-12 23:17:57.186 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-12 23:17:57.536 +03:30 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-11-12 23:17:57.588 +03:30 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-11-12 23:17:57.667 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-12 23:17:57.667 +03:30 [INF] Hosting environment: Development
+2022-11-12 23:17:57.667 +03:30 [INF] Content root path: D:\Web\mailfa\Mailfa.CleanArch\Mailfa.CleanArch.Web\
+2022-11-12 23:17:57.689 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2022-11-12 23:17:57.741 +03:30 [WRN] Failed to determine the https port for redirect.
+2022-11-12 23:17:57.802 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 404 - - 114.8778ms
+2022-11-12 23:18:00.787 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - -
+2022-11-12 23:18:01.031 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2022-11-12 23:18:01.031 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2022-11-12 23:18:01.035 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - - - 200 - text/html;charset=utf-8 247.9440ms
+2022-11-12 23:18:01.043 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12010 application/javascript;+charset=utf-8 12.0650ms
+2022-11-12 23:18:01.076 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 45.0387ms
+2022-11-12 23:18:01.153 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - -
+2022-11-12 23:18:01.320 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 166.6559ms
+2022-11-12 23:18:04.437 +03:30 [INF] Request starting HTTP/1.1 POST http://localhost:57678/v1/drive/GetFolders application/json 27
+2022-11-12 23:18:04.445 +03:30 [INF] Executing endpoint 'Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web)'
+2022-11-12 23:18:04.489 +03:30 [INF] Route matched with {action = "GetFolders", controller = "Drive"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFolders(Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.GetFolderInput) on controller Mailfa.CleanArch.Web.Controllers.v1.DriveController (Mailfa.CleanArch.Web).
+2022-11-12 23:18:04.511 +03:30 [INF] Executed action Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web) in 10.278ms
+2022-11-12 23:18:04.514 +03:30 [INF] Executed endpoint 'Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web)'
+2022-11-12 23:18:04.517 +03:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Mailfa.CleanArch.Core.Interfaces.IDriveService' while attempting to activate 'Mailfa.CleanArch.Web.Controllers.v1.DriveController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method507(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Ardalis.ListStartupServices.ShowAllServicesMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-11-12 23:18:04.598 +03:30 [INF] Request finished HTTP/1.1 POST http://localhost:57678/v1/drive/GetFolders application/json 27 - 500 - text/plain;+charset=utf-8 160.9312ms
+2022-11-12 23:18:59.134 +03:30 [INF] User profile is available. Using 'C:\Users\mehdi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-12 23:19:00.062 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-12 23:19:00.472 +03:30 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-11-12 23:19:00.535 +03:30 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-11-12 23:19:00.631 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-12 23:19:00.631 +03:30 [INF] Hosting environment: Development
+2022-11-12 23:19:00.631 +03:30 [INF] Content root path: D:\Web\mailfa\Mailfa.CleanArch\Mailfa.CleanArch.Web\
+2022-11-12 23:19:00.655 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2022-11-12 23:19:00.655 +03:30 [INF] Request starting HTTP/1.1 POST http://localhost:57678/v1/drive/GetFolders application/json 27
+2022-11-12 23:19:00.700 +03:30 [WRN] Failed to determine the https port for redirect.
+2022-11-12 23:19:00.721 +03:30 [INF] Executing endpoint 'Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web)'
+2022-11-12 23:19:00.752 +03:30 [INF] Route matched with {action = "GetFolders", controller = "Drive"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFolders(Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.GetFolderInput) on controller Mailfa.CleanArch.Web.Controllers.v1.DriveController (Mailfa.CleanArch.Web).
+2022-11-12 23:19:00.765 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 404 - - 111.8618ms
+2022-11-12 23:19:01.017 +03:30 [INF] Executing action method Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web) - Validation state: "Valid"
+2022-11-12 23:19:01.046 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-12 23:19:01.101 +03:30 [INF] Executed action method Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 80.1516ms.
+2022-11-12 23:19:01.106 +03:30 [INF] Executing OkObjectResult, writing value of type 'Ardalis.Result.Result`1[[Mailfa.CleanArch.Core.ProjectAggregate.Models.drive.GetDriveFolderOutput, Mailfa.CleanArch.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-12 23:19:01.172 +03:30 [INF] Executed action Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web) in 415.6533ms
+2022-11-12 23:19:01.172 +03:30 [INF] Executed endpoint 'Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web)'
+2022-11-12 23:19:01.180 +03:30 [INF] Request finished HTTP/1.1 POST http://localhost:57678/v1/drive/GetFolders application/json 27 - 200 219 application/json;+charset=utf-8 528.3764ms
+2022-11-12 23:20:30.566 +03:30 [INF] User profile is available. Using 'C:\Users\mehdi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-12 23:20:31.368 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-12 23:20:31.701 +03:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-11-12 23:20:31.754 +03:30 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-11-12 23:20:31.835 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-12 23:20:31.835 +03:30 [INF] Hosting environment: Development
+2022-11-12 23:20:31.835 +03:30 [INF] Content root path: D:\Web\mailfa\Mailfa.CleanArch\Mailfa.CleanArch.Web\
+2022-11-12 23:20:31.858 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2022-11-12 23:20:31.906 +03:30 [WRN] Failed to determine the https port for redirect.
+2022-11-12 23:20:31.966 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 404 - - 109.6640ms
+2022-11-12 23:20:32.639 +03:30 [INF] Request starting HTTP/1.1 POST http://localhost:57678/v1/drive/GetFolders application/json 29
+2022-11-12 23:20:32.649 +03:30 [INF] Executing endpoint 'Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web)'
+2022-11-12 23:20:32.685 +03:30 [INF] Route matched with {action = "GetFolders", controller = "Drive"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFolders(Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.GetFolderInput) on controller Mailfa.CleanArch.Web.Controllers.v1.DriveController (Mailfa.CleanArch.Web).
+2022-11-12 23:20:32.991 +03:30 [INF] Executing action method Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web) - Validation state: "Valid"
+2022-11-12 23:20:33.044 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-12 23:20:33.885 +03:30 [ERR] Failed executing DbCommand (128ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DFL_ID], [d].[DFL_CreateDate], [d].[DFL_IsShared], [d].[DFL_Name], [d].[DFL_ParentID], [d].[DFL_Size], [d].[DFL_UserID], [d].[DFL_Version]
+FROM [DriveFolder] AS [d]
+WHERE [d].[DFL_UserID] = @__userId_0
+2022-11-12 23:20:33.940 +03:30 [ERR] An exception occurred while iterating over the results of a query for context type 'Mailfa.CleanArch.Infrastructure.Data.AppDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'DriveFolder'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:89cdfd5f-020c-44b7-904a-149966301c79
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'DriveFolder'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:89cdfd5f-020c-44b7-904a-149966301c79
+Error Number:208,State:1,Class:16
+2022-11-12 23:20:34.037 +03:30 [INF] Executed action method Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1041.2132ms.
+2022-11-12 23:20:34.057 +03:30 [INF] Executing OkObjectResult, writing value of type 'Ardalis.Result.Result`1[[Mailfa.CleanArch.Core.ProjectAggregate.Models.drive.GetDriveFolderOutput, Mailfa.CleanArch.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-12 23:20:34.169 +03:30 [INF] Executed action Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web) in 1479.3452ms
+2022-11-12 23:20:34.171 +03:30 [INF] Executed endpoint 'Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web)'
+2022-11-12 23:20:34.188 +03:30 [INF] Request finished HTTP/1.1 POST http://localhost:57678/v1/drive/GetFolders application/json 29 - 200 150 application/json;+charset=utf-8 1548.5867ms
+2022-11-12 23:21:07.817 +03:30 [INF] Request starting HTTP/1.1 POST http://localhost:57678/v1/drive/GetFolders application/json 29
+2022-11-12 23:21:07.818 +03:30 [INF] Executing endpoint 'Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web)'
+2022-11-12 23:21:07.818 +03:30 [INF] Route matched with {action = "GetFolders", controller = "Drive"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFolders(Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.GetFolderInput) on controller Mailfa.CleanArch.Web.Controllers.v1.DriveController (Mailfa.CleanArch.Web).
+2022-11-12 23:21:07.831 +03:30 [INF] Executing action method Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web) - Validation state: "Valid"
+2022-11-12 23:21:29.147 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-12 23:21:29.168 +03:30 [ERR] Failed executing DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DFL_ID], [d].[DFL_CreateDate], [d].[DFL_IsShared], [d].[DFL_Name], [d].[DFL_ParentID], [d].[DFL_Size], [d].[DFL_UserID], [d].[DFL_Version]
+FROM [DriveFolder] AS [d]
+WHERE [d].[DFL_UserID] = @__userId_0
+2022-11-12 23:21:29.169 +03:30 [ERR] An exception occurred while iterating over the results of a query for context type 'Mailfa.CleanArch.Infrastructure.Data.AppDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'DriveFolder'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:89cdfd5f-020c-44b7-904a-149966301c79
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'DriveFolder'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:89cdfd5f-020c-44b7-904a-149966301c79
+Error Number:208,State:1,Class:16
+2022-11-12 23:23:06.398 +03:30 [INF] Executed action method Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 118566.9514ms.
+2022-11-12 23:23:06.412 +03:30 [INF] Executing OkObjectResult, writing value of type 'Ardalis.Result.Result`1[[Mailfa.CleanArch.Core.ProjectAggregate.Models.drive.GetDriveFolderOutput, Mailfa.CleanArch.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-12 23:23:06.413 +03:30 [INF] Executed action Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web) in 118594.7957ms
+2022-11-12 23:23:06.413 +03:30 [INF] Executed endpoint 'Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web)'
+2022-11-12 23:23:06.413 +03:30 [INF] Request finished HTTP/1.1 POST http://localhost:57678/v1/drive/GetFolders application/json 29 - 200 150 application/json;+charset=utf-8 118596.3734ms
+2022-11-12 23:23:13.488 +03:30 [INF] Request starting HTTP/1.1 POST http://localhost:57678/v1/drive/GetFolders application/json 29
+2022-11-12 23:23:13.488 +03:30 [INF] Executing endpoint 'Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web)'
+2022-11-12 23:23:13.488 +03:30 [INF] Route matched with {action = "GetFolders", controller = "Drive"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFolders(Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.GetFolderInput) on controller Mailfa.CleanArch.Web.Controllers.v1.DriveController (Mailfa.CleanArch.Web).
+2022-11-12 23:23:13.506 +03:30 [INF] Executing action method Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web) - Validation state: "Valid"
+2022-11-12 23:23:20.191 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-12 23:23:20.199 +03:30 [ERR] Failed executing DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DFL_ID], [d].[DFL_CreateDate], [d].[DFL_IsShared], [d].[DFL_Name], [d].[DFL_ParentID], [d].[DFL_Size], [d].[DFL_UserID], [d].[DFL_Version]
+FROM [DriveFolder] AS [d]
+WHERE [d].[DFL_UserID] = @__userId_0
+2022-11-12 23:23:20.201 +03:30 [ERR] An exception occurred while iterating over the results of a query for context type 'Mailfa.CleanArch.Infrastructure.Data.AppDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'DriveFolder'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:89cdfd5f-020c-44b7-904a-149966301c79
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'DriveFolder'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:89cdfd5f-020c-44b7-904a-149966301c79
+Error Number:208,State:1,Class:16
+2022-11-12 23:23:23.519 +03:30 [INF] Executed action method Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 10012.9014ms.
+2022-11-12 23:23:23.519 +03:30 [INF] Executing OkObjectResult, writing value of type 'Ardalis.Result.Result`1[[Mailfa.CleanArch.Core.ProjectAggregate.Models.drive.GetDriveFolderOutput, Mailfa.CleanArch.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-12 23:23:23.519 +03:30 [INF] Executed action Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web) in 10030.7461ms
+2022-11-12 23:23:23.519 +03:30 [INF] Executed endpoint 'Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web)'
+2022-11-12 23:23:23.520 +03:30 [INF] Request finished HTTP/1.1 POST http://localhost:57678/v1/drive/GetFolders application/json 29 - 200 150 application/json;+charset=utf-8 10031.5577ms
+2022-11-12 23:24:35.927 +03:30 [INF] User profile is available. Using 'C:\Users\mehdi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-12 23:24:36.707 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-12 23:24:37.055 +03:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-11-12 23:24:37.103 +03:30 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-11-12 23:24:37.181 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-12 23:24:37.182 +03:30 [INF] Hosting environment: Development
+2022-11-12 23:24:37.182 +03:30 [INF] Content root path: D:\Web\mailfa\Mailfa.CleanArch\Mailfa.CleanArch.Web\
+2022-11-12 23:24:37.203 +03:30 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2022-11-12 23:24:37.250 +03:30 [WRN] Failed to determine the https port for redirect.
+2022-11-12 23:24:37.298 +03:30 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 404 - - 97.4935ms
+2022-11-12 23:24:38.977 +03:30 [INF] Request starting HTTP/1.1 POST http://localhost:57678/v1/drive/GetFolders application/json 29
+2022-11-12 23:24:38.991 +03:30 [INF] Executing endpoint 'Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web)'
+2022-11-12 23:24:39.033 +03:30 [INF] Route matched with {action = "GetFolders", controller = "Drive"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFolders(Mailfa.CleanArch.Core.ProjectAggregate.ViewModel.GetFolderInput) on controller Mailfa.CleanArch.Web.Controllers.v1.DriveController (Mailfa.CleanArch.Web).
+2022-11-12 23:24:39.315 +03:30 [INF] Executing action method Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web) - Validation state: "Valid"
+2022-11-12 23:24:42.194 +03:30 [INF] Entity Framework Core 6.0.10 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2022-11-12 23:24:43.155 +03:30 [INF] Executed DbCommand (83ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DFL_ID], [d].[DFL_CreateDate], [d].[DFL_IsShared], [d].[DFL_Name], [d].[DFL_ParentID], [d].[DFL_Size], [d].[DFL_UserID], [d].[DFL_Version]
+FROM [Drive].[DriveFolder] AS [d]
+WHERE [d].[DFL_UserID] = @__userId_0
+2022-11-12 23:24:48.250 +03:30 [INF] Executed action method Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8929.8955ms.
+2022-11-12 23:24:48.258 +03:30 [INF] Executing OkObjectResult, writing value of type 'Ardalis.Result.Result`1[[Mailfa.CleanArch.Core.ProjectAggregate.Models.drive.GetDriveFolderOutput, Mailfa.CleanArch.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-12 23:24:48.334 +03:30 [INF] Executed action Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web) in 9297.2098ms
+2022-11-12 23:24:48.335 +03:30 [INF] Executed endpoint 'Mailfa.CleanArch.Web.Controllers.v1.DriveController.GetFolders (Mailfa.CleanArch.Web)'
+2022-11-12 23:24:48.344 +03:30 [INF] Request finished HTTP/1.1 POST http://localhost:57678/v1/drive/GetFolders application/json 29 - 200 659 application/json;+charset=utf-8 9367.0936ms

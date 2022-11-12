@@ -2,7 +2,7 @@
 using Mailfa.CleanArch.Core.ProjectAggregate.Models.webMail;
 using static Mailfa.CleanArch.Core.ProjectAggregate.Enums;
 
-namespace Mailfa.CleanArch.Core.ProjectAggregate.Specifications;
+namespace Mailfa.CleanArch.Core.ProjectAggregate.Specifications.webMail;
 
 public class CheckRequestByIpAndTypeSpec : Specification<WebMail_CheckRequest>, ISingleResultSpecification
 {

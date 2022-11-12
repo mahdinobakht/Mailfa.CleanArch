@@ -131,5 +131,14 @@ namespace Mailfa.CleanArch.Core.Properties {
                 return ResourceManager.GetString("NotRecoveryMethodsExist", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to پوشه ای برای این کاربر موجود نیست.
+        /// </summary>
+        internal static string UserFolderNotExist {
+            get {
+                return ResourceManager.GetString("UserFolderNotExist", resourceCulture);
+            }
+        }
     }
 }

@@ -141,4 +141,7 @@
   <data name="NotRecoveryMethodsExist" xml:space="preserve">
     <value>هیچ یک از روش های بازیابی ایمیل براش شما فعال نیست</value>
   </data>
+  <data name="UserFolderNotExist" xml:space="preserve">
+    <value>پوشه ای برای این کاربر موجود نیست</value>
+  </data>
 </root>

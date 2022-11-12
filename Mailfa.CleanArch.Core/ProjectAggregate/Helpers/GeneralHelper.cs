@@ -75,6 +75,11 @@ namespace Mailfa.CleanArch.Core.ProjectAggregate.Helpers
             var attr = new EmailAddressAttribute();
             return attr.IsValid(email);
         }
+        public static int GetUserId()
+        {
+            return 1;
+        }
+        
 
     }
 }

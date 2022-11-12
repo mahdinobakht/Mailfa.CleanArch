@@ -7,6 +7,8 @@ using Mailfa.CleanArch.Core.ProjectAggregate.Helpers;
 using Mailfa.CleanArch.Core.ProjectAggregate.hMail;
 using Mailfa.CleanArch.Core.ProjectAggregate.Models.webMail;
 using Mailfa.CleanArch.Core.ProjectAggregate.Specifications;
+using Mailfa.CleanArch.Core.ProjectAggregate.Specifications.hMail;
+using Mailfa.CleanArch.Core.ProjectAggregate.Specifications.webMail;
 using Mailfa.CleanArch.Core.ProjectAggregate.ViewModel;
 using Mailfa.CleanArch.SharedKernel.Interfaces;
 using MediatR;

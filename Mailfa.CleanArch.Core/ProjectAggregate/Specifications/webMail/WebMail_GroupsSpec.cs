@@ -1,15 +1,14 @@
 ﻿using Ardalis.Specification;
 using Mailfa.CleanArch.Core.ProjectAggregate.Models.webMail;
 
-namespace Mailfa.CleanArch.Core.ProjectAggregate.Specifications;
+namespace Mailfa.CleanArch.Core.ProjectAggregate.Specifications.webMail;
 
 public class GroupByDefaultAndDomainIdSpec : Specification<WebMail_Groups>, ISingleResultSpecification
 {
-  public GroupByDefaultAndDomainIdSpec(int domainId)
-  {
+    public GroupByDefaultAndDomainIdSpec(int domainId)
+    {
         Query
             .Where(p => p.Group_Default == true && p.Group_DomainId == domainId);
-  }
+    }
 }
 
- 

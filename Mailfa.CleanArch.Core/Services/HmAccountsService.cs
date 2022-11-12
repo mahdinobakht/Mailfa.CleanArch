@@ -7,6 +7,7 @@ using Mailfa.CleanArch.Core.Interfaces;
 using Mailfa.CleanArch.Core.ProjectAggregate.Helpers;
 using Mailfa.CleanArch.Core.ProjectAggregate.hMail;
 using Mailfa.CleanArch.Core.ProjectAggregate.Specifications;
+using Mailfa.CleanArch.Core.ProjectAggregate.Specifications.hMail;
 using Mailfa.CleanArch.SharedKernel.Interfaces;
 
 

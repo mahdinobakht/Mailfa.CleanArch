@@ -1,11 +1,12 @@
 ﻿using Mailfa.CleanArch.Controllers;
 using Mailfa.CleanArch.Core.Interfaces;
+using Mailfa.CleanArch.Core.ProjectAggregate.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Mailfa.CleanArch.Web.Controllers.v1
 {
-    [Route("drive")]
+    [Route("v1/drive")]
     [ApiController]
     public class DriveController : BaseApiController<DriveController>
     {
@@ -19,9 +20,9 @@ namespace Mailfa.CleanArch.Web.Controllers.v1
 
         [HttpPost("GetFolders")]
         [AllowAnonymous]
-        public async Task<IActionResult> GetFolders(string mobileNumber)
+        public async Task<IActionResult> GetFolders(GetFolderInput request)
         {
-            var result = await driveService.GetFolders(mobileNumber);
+            var result = await driveService.GetFolders(request);
             return Ok(result);
         }
 

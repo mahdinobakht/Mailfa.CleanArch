@@ -1,7 +1,7 @@
 ﻿using Ardalis.Specification;
 using Mailfa.CleanArch.Core.ProjectAggregate.Models.webMail;
 
-namespace Mailfa.CleanArch.Core.ProjectAggregate.Specifications;
+namespace Mailfa.CleanArch.Core.ProjectAggregate.Specifications.webMail;
 
 public class UserByMobileWithItemsSpec : Specification<WebMail_Users>, ISingleResultSpecification
 {
